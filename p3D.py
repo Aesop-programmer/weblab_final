@@ -13,6 +13,7 @@ k = 0
 
 
 def draw():
+    global mod_time
     new_mtime = time.ctime(os.path.getmtime('xyz3.txt'))
     global x
     global y
