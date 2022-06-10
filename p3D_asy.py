@@ -9,13 +9,13 @@ x = list()
 y = list()
 z = list()
 file = open('xyz_plot.txt', 'r')
-for line in file.readlines():
+for line in file.readlines()[:-1]:
     a = line.split(',')
-    a[-1] = a[-1][0:-2]
-    x.append(float(a[0]))
-    y.append(float(a[1]))
-    z.append(float(a[2]))
+    a[-1] = a[-1][0:-1]
+    x.append(np.float64(a[0]))
+    y.append(np.float64(a[1]))
+    z.append(np.float64(a[2]))
     plt.scatter(x, y, z)
     plt.show()
-    plt.pause(0.0001)
+    plt.pause(1)
 plt.close()
