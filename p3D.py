@@ -14,7 +14,7 @@ k = 0
 
 def draw():
     global mod_time
-    new_mtime = time.ctime(os.path.getmtime('xyz3.txt'))
+    new_mtime = time.ctime(os.path.getmtime('xyz_.txt'))
     global x
     global y
     global z
