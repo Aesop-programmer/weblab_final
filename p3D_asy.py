@@ -17,5 +17,5 @@ for line in file.readlines()[:-1]:
     z.append(np.float64(a[2]))
     plt.scatter(x, y, z)
     plt.show()
-    plt.pause(1)
+    plt.pause(0.0001)
 plt.close()
