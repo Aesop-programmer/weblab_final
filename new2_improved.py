@@ -11,7 +11,8 @@ import numpy as np
 import pandas as pd
 mod_time = time.ctime(os.path.getmtime('xyz3.txt'))
 k = 0
-p_final = np.array()
+a = [1,2,3]
+p_final = np.array(a,np.float64())
 
 
 def load():
