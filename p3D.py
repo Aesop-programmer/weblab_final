@@ -25,13 +25,14 @@ def draw():
         file = open('xyz_plot.txt', 'r')
         for line in file.readlines()[k-70:k-1]:
             a = line.split(',')
-            a[-1] = a[-1][0:-1]
-            x.append(a[0])
-            y.append(a[1])
-            z.append(a[2])
-            plt.scatter(x, y, z)
-            plt.show()
-            plt.pause(0.0001)
+            if(len(a)==3):
+                a[-1] = a[-1][0:-1]
+                x.append(a[0])
+                y.append(a[1])
+                z.append(a[2])
+                plt.scatter(x, y, z)
+                plt.show()
+                plt.pause(0.0001)
 
 
 while(True):
