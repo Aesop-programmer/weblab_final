@@ -1,3 +1,5 @@
+#include <MPU9250.h>
+
 #include "MPU9250.h"
 
 MPU9250 mpu;
@@ -33,6 +35,7 @@ void setup() {
     int i = 0;
     while(i < 50 ){
        if (mpu.update()) {
+        mpu.update_mag();
        static uint32_t prev_ms = millis();
        if (millis() > prev_ms + 1) {
            getgyro();

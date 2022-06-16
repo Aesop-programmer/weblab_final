@@ -18,7 +18,7 @@ import numpy as np
 '''
 一開始沒通為輸出a 當通時開始讀資料
 '''
-ser = serial.Serial('COM3', baudrate=115200)
+ser = serial.Serial('COM5', baudrate=19200)
 while True:
     line = ser.readline()
     if line != b'':
